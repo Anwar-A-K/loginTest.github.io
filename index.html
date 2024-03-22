@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Link Redirector</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // Extract the parameter after #
+            const hashParams = location.hash.substring(1); // Removes the #
+            // Construct the deep link URL
+            const deepLinkURL = `yourapp://deepLink?code=${encodeURIComponent(hashParams)}`;
+            // Redirect to the deep link URL which opens the app
+            window.location = deepLinkURL;
+        });
+    </script>
+</body>
+</html>
